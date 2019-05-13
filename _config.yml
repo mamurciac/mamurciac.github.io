@@ -1,64 +1,65 @@
-# Site settings
-title: Freelancer
+#Configuración del sitio
+title: Michael Andrés Murcia
 email: mamurciac@unal.edu.co
 url: https://mamurciac.github.io
 description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
 keywords: "your keywords, separated by commas"
+keywords: "Cálculo, Datos, Información, Ingeniería, Programación, Sistemas, Ilustración Digital"
 skills: "Web Developer - Graphic Artist - User Experience Designer"
 meta_author: Michael Andrés Murcia Contreras
 meta_email: mamurciac@unal.edu.co
 
-# Google webmaster tools
+#Verificación de la página en el buscador de Google (Con Google Webmaster Tools)
 google_verify:
 
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+#Verificación de la página en el buscador de Bing. Enlace de apoyo: https://ssl.bing.com/webmaster/configure/verify/ownership Option 2
 bing_verify:
 
-# Contact form:
-# - static : pass through formspree.io to validate email sending
-# - disqus : replace contact form by disqus thread
-# - comment the line below if you want to stick with the default PHP contact form
+#Formulario de Contacto:
+#  - static: Se valida el envió del mensaje de correo electrónico con Formspree.io
+#  - disqus: Se reemplaza el formulario de contacto por el hilo de Disqus
+#Para mantener el formulario de contacto de PHP predeterminado, se comenta la próxima línea
 contact: static
 
-# If you use disqus you need disqus shortname
-# https://help.disqus.com/customer/portal/articles/466208
+#Si se utiliza disqus, es necesario el nombre breve de la página en disqus
+#https://help.disqus.com/customer/portal/articles/466208
 disqus_shortname: myshortname
 
-# Color settings (hex-codes without the leading hash-tag)
+#Ajustes de Color (En codificación hexadecimal sin la etiqueta de hashtag)
 color:
   primary: 18bc9c #80B3FF
   primary-rgb: "24,288,156" #"128,179,255"
   secondary: 2c3e50 #FD6E8A
   secondary-dark: 233140 #A2122F
 
-# Footer settings
+#Ajustes de pie de página
 footer:
-  copyright: Dr. Henry Jekyll
-  location: Location
-  social: Around the Web
-  credits: Credits
+  copyright: El conocimiento es la mejor inversión que se puede hacer (Abraham Lincoln)
+  location: Ubicación
+  social: En la Web
+  credits: Créditos
 
-# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+#Nombres de usuario para Redes Sociales (Hay varias disponibles como: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
-  - title: twitter
-    url: http://twitter.com/jekyllrb
   - title: facebook
-    url:
-  - title: stack-overflow
-    url: http://stackoverflow.com/questions/tagged/jekyll
-  - title: bitbucket
-    url: http://bitbucket.org/jekyll
+    url: https://www.facebook.com/maykol.murziia.fiifty/
+  - title: instagram
+    url: https://www.instagram.com/mamurciac/
+  - title: linkedin
+    url: https://www.linkedin.com/in/michael-andr%C3%A9s-murcia-contreras-05428b147/
   - title: github
-    url: http://github.com/jekyll
+    url: http://github.com/mamurciac/
+  - title: google-plus
+    url: https://plus.google.com/112959156376505048233/
 
-# Postal address (add as many lines as necessary)
+#Dirección Postal (Se pueden añadir cuantas líneas sean necesarias)
 address:
-  - line: 3481 Melrose Place
-  - line: Beverly Hills, CA 90210
+  - line: Universidad Nacional
+  - line: Bogotá D.C., Colombia
 
-# Credits content
+#Contenido de los créditos
 credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
 
-# Build settings
+#Ajustes de compilación
 markdown: kramdown
 permalink: pretty
