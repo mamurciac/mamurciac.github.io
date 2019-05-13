@@ -1,23 +1,21 @@
-$(function() {
+$(function(){
+  $("input,textarea").jqBootstrapValidation({
+    preventSubmit: true, submitError: function($form, event, errors){
+      //Mensajes o eventos de error adicionales
+    },
 
-    $("input,textarea").jqBootstrapValidation({
-        preventSubmit: true,
-        submitError: function($form, event, errors) {
-            // additional error messages or events
-        },
+    filter: function(){
+      return $(this).is(":visible");
+    },
+  });
 
-        filter: function() {
-            return $(this).is(":visible");
-        },
-    });
-
-    $("a[data-toggle=\"tab\"]").click(function(e) {
-        e.preventDefault();
-        $(this).tab("show");
-    });
+  $("a[data-toggle=\"tab\"]").click(function(e){
+    e.preventDefault();
+    $(this).tab("show");
+  });
 });
 
-/*When clicking on Full hide fail/success boxes */
-$('#name').focus(function() {
-    $('#success').html('');
+//Al hacer clic en Full hide o en cajas de éxito/error
+$('#name').focus(function(){
+  $('#success').html('');
 });
