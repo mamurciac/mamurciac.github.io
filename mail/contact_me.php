@@ -1,32 +1,26 @@
 <?php
-$email_address = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+  $email_address = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
 
-// Check for empty fields
-if(empty($_POST['name'])  		||
-   empty($_POST['email']) 		||
-   empty($_POST['phone']) 		||
-   empty($_POST['message'])	||
-   !$email_address)
-   {
-	echo "No arguments Provided!";
-	return false;
-   }
+  //Revisión de campos vacíos
+  if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['phone']) || empty($_POST['message']) || !$email_address){
+    echo "Los campos del formulario no pueden estar vacíos";
+    return false;
+  }
 
-$name = $_POST['name'];
-if ($email_address === FALSE) {
-    echo 'Invalid email';
+  $name = $_POST['name'];
+  if($email_address === FALSE){
+    echo 'La dirección de correo electrónico no es válida';
     exit(1);
-}
-$phone = $_POST['phone'];
-$message = $_POST['message'];
+  }
+  $phone = $_POST['phone'];
+  $message = $_POST['message'];
 
-
-// Create the email and send the message
-$to = 'yourname@yourdomain.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
-$email_subject = "Website Contact Form:  $name";
-$email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
-$headers = "From: noreply@yourdomain.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
-$headers .= "Reply-To: $email_address";
-mail($to,$email_subject,$email_body,$headers);
-return true;
+  //Se crea el mensaje de correo electrónico y se envía al destinatario
+  $to = 'mamurciac@unal.edu.co';
+  $email_subject = "Mensaje de tu Página Personal (mamurciac.github.io) de: $name";
+  $email_body = "Has recibido un mensaje desde tu página personal.\n\n" . "Detalles del mensaje:\n\nNombre: $name\n\nDirección de Correo Electrónico: $email_address\n\nTeléfono: $phone\n\nMensaje:\n$message";
+  $headers = "From: noreply@yourdomain.com\n"; //Esta es la dirección de correo electrónico desde la que se generará el mensaje. Se recomienda usar una dirección como noreply@yourdomain.com.
+  $headers .= "Respuesta al mensaje de: $email_address";
+  mail($to, $email_subject, $email_body, $headers);
+  return true;
 ?>
