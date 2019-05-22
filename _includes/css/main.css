@@ -91,7 +91,12 @@ header .intro-text .name{
   font-weight: 700;
 }
 
-header .intro-text .skills{
+header .intro-text{
+  font-size: 1.25em;
+  font-weight: 300;
+}
+
+.skills{
   font-size: 1.25em;
   font-weight: 300;
 }
@@ -106,7 +111,11 @@ header .intro-text .skills{
     font-size: 4.75em;
   }
 
-  header .intro-text .skills{
+  header .intro-text{
+    font-size: 1.75em;
+  }
+
+  .skills{
     font-size: 1.75em;
   }
 }
@@ -201,6 +210,18 @@ section.success{
   min-height: 50px;
   max-height: 200px;
   vertical-align: middle;
+}
+
+.icon-profile-descriptor{
+  display: block;
+  position: relative;
+  top: 50%;
+  z-index: 5;
+  margin: auto;
+  min-height: 75px;
+  max-height: 250px;
+  vertical-align: middle;
+  border-radius: 100%;
 }
 
 #portfolio .portfolio-item{
